@@ -1,0 +1,3246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MegTalksSex — Content Strategy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cream: #F7F7F7;
+    --warm-white: #FFFFFF;
+    --ink: #0D0D0D;
+    --terracotta: #E0327A;
+    --terracotta-light: #F562A0;
+    --blush: #FFD6EB;
+    --sage: #5A8A7A;
+    --sage-light: #C0DDD7;
+    --gold: #9B6FD4;
+    --muted: #666666;
+    --border: #E2E2E2;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--ink);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    border-bottom: 2px solid var(--terracotta);
+  }
+
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+  }
+
+  .nav-brand span { color: var(--terracotta-light); }
+
+  .nav-links {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-right: 4px;
+  }
+
+  .nav-links::-webkit-scrollbar { display: none; }
+
+  .nav-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .nav-link:hover { background: rgba(224,50,122,0.2); color: var(--terracotta-light); }
+
+  /* HERO */
+  .hero {
+    background: var(--ink);
+    padding: 60px 24px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(224,50,122,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--terracotta-light);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 9vw, 64px);
+    color: var(--cream);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+
+  .hero-title em {
+    color: var(--terracotta-light);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    color: var(--muted);
+    margin-top: 20px;
+    max-width: 480px;
+    line-height: 1.6;
+  }
+
+  .sex-note {
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(224,50,122,0.15);
+    border: 1px solid rgba(224,50,122,0.3);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--terracotta-light);
+    letter-spacing: 0.04em;
+  }
+
+  .sex-note strong { color: var(--blush); }
+
+  /* SECTION WRAPPER */
+  section {
+    padding: 48px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 6vw, 36px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+
+  .section-body {
+    font-size: 15px;
+    color: #2A2A2A;
+    line-height: 1.7;
+    max-width: 640px;
+  }
+
+  /* BIO BOXES */
+  .bio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .bio-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--terracotta);
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .bio-card-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .bio-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .bio-card p {
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.6;
+  }
+
+  /* POSITIONING */
+  .positioning-box {
+    background: var(--ink);
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-top: 24px;
+  }
+
+  .positioning-box .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--terracotta-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .positioning-statement {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(16px, 4vw, 22px);
+    color: var(--cream);
+    line-height: 1.4;
+    font-style: italic;
+  }
+
+  .positioning-statement em { color: var(--terracotta-light); font-style: normal; }
+
+  /* TIKTOK BIO OPTIONS */
+  .bio-options {
+    display: grid;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .bio-option {
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--warm-white);
+    transition: border-color 0.2s;
+  }
+
+  .bio-option:hover { border-color: var(--terracotta); }
+
+  .bio-option-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--terracotta);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .bio-option-tag {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  .bio-option-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .bio-line {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--ink);
+    background: var(--cream);
+    padding: 8px 12px;
+    border-radius: 6px;
+    line-height: 1.4;
+  }
+
+  /* STRATEGY */
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 24px 0;
+  }
+
+  .stat-box {
+    background: var(--ink);
+    border-radius: 10px;
+    padding: 16px 12px;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--terracotta-light);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.3;
+  }
+
+  /* OPPORTUNITY TAGS */
+  .opp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .opp-tag {
+    background: var(--blush);
+    color: var(--terracotta);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 100px;
+    letter-spacing: -0.01em;
+  }
+
+  /* PILLARS */
+  .pillars-grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .pillar-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .pillar-num {
+    width: 48px;
+    height: 48px;
+    background: var(--terracotta);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--cream);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .pillar-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+
+  .pillar-desc {
+    font-size: 13px;
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .pillar-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .pillar-tag {
+    font-size: 11px;
+    background: var(--sage-light);
+    color: var(--sage);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  .pillar-tag.gold { background: rgba(155,111,212,0.15); color: var(--gold); }
+  .pillar-tag.blush { background: var(--blush); color: var(--terracotta); }
+
+  /* FUNNEL GRID */
+  .funnel-section { background: var(--warm-white); }
+
+  .funnel-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .funnel-tabs::-webkit-scrollbar { display: none; }
+
+  .funnel-tab {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1.5px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+
+  .funnel-tab.active, .funnel-tab:hover {
+    background: var(--ink);
+    color: var(--cream);
+    border-color: var(--ink);
+  }
+
+  .funnel-stage { display: none; }
+  .funnel-stage.active { display: block; }
+
+  .funnel-stage-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    background: var(--ink);
+    border-radius: 8px;
+  }
+
+  .funnel-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: var(--cream);
+    flex-shrink: 0;
+  }
+
+  .funnel-badge.tofu { background: var(--sage); }
+  .funnel-badge.mofu { background: var(--gold); }
+  .funnel-badge.bofu { background: var(--terracotta); }
+
+  .funnel-stage-desc { font-size: 13px; color: var(--muted); }
+
+  .pillar-funnel-block {
+    margin-bottom: 20px;
+  }
+
+  .pillar-funnel-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hook-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hook-item {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.5;
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .hook-item::before {
+    content: '→';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: var(--terracotta);
+    font-size: 12px;
+  }
+
+  .show-more-btn {
+    background: transparent;
+    border: 1.5px dashed var(--border);
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    cursor: pointer;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 8px;
+    transition: all 0.2s;
+  }
+
+  .show-more-btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
+
+  /* FORMATS */
+  .formats-grid {
+    display: grid;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .format-card {
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--warm-white);
+  }
+
+  .format-header {
+    background: var(--ink);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .format-emoji {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .format-title-block {}
+
+  .format-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: var(--cream);
+    margin-bottom: 2px;
+  }
+
+  .format-subtitle {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--terracotta-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .format-body {
+    padding: 18px 20px;
+  }
+
+  .format-desc {
+    font-size: 14px;
+    color: #1A1A1A;
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+
+  .format-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .format-badge {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  .format-badge.high { background: rgba(122,158,138,0.15); border-color: var(--sage); color: var(--sage); }
+  .format-badge.med { background: rgba(155,111,212,0.1); border-color: var(--gold); color: var(--gold); }
+
+  /* CREATORS */
+  .creator-grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .creator-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+
+  .creator-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .creator-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+
+  .creator-platform {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .creator-borrow {
+    font-size: 12px;
+    background: var(--blush);
+    color: var(--terracotta);
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-weight: 500;
+    align-self: flex-start;
+  }
+
+  .creator-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .creator-bullets li {
+    font-size: 13px;
+    color: #333333;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.4;
+  }
+
+  .creator-bullets li::before {
+    content: '·';
+    position: absolute;
+    left: 4px;
+    color: var(--terracotta);
+    font-size: 16px;
+    top: -1px;
+  }
+
+  /* GAPS */
+  .gaps-box {
+    background: var(--ink);
+    border-radius: 12px;
+    padding: 24px 20px;
+    margin-top: 24px;
+    display: grid;
+    gap: 16px;
+  }
+
+  .gap-item {}
+
+  .gap-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--terracotta-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .gap-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+
+  .gap-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* PSYCHOLOGY */
+  .psych-grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .psych-card {
+    background: var(--warm-white);
+    border-left: 4px solid var(--sage);
+    border-radius: 0 10px 10px 0;
+    padding: 18px;
+  }
+
+  .psych-card.follow { border-color: var(--terracotta); }
+  .psych-card.share { border-color: var(--gold); }
+  .psych-card.stay { border-color: var(--sage); }
+
+  .psych-q {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .psych-q.follow { color: var(--terracotta); }
+  .psych-q.share { color: var(--gold); }
+  .psych-q.stay { color: var(--sage); }
+
+  .psych-answer {
+    font-size: 14px;
+    color: #1A1A1A;
+    line-height: 1.65;
+  }
+
+  /* AUDIENCE */
+  .audience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .audience-tag {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1.5px solid var(--border);
+    color: var(--ink);
+    background: var(--warm-white);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+
+  .footer-brand span { color: var(--terracotta-light); }
+
+  .footer-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  /* ACCORDION */
+  .accordion-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+
+  .accordion-btn {
+    width: 100%;
+    background: var(--warm-white);
+    border: none;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    transition: background 0.2s;
+  }
+
+  .accordion-btn:hover { background: var(--cream); }
+
+  .accordion-icon {
+    font-size: 18px;
+    color: var(--terracotta);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+
+  .accordion-btn.open .accordion-icon { transform: rotate(45deg); }
+
+  .accordion-content {
+    display: none;
+    padding: 14px 16px;
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+  }
+
+  .accordion-content.open { display: block; }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 20px 0;
+  }
+
+  /* INLINE NOTE */
+  .inline-note {
+    background: rgba(224,50,122,0.07);
+    border: 1px solid rgba(224,50,122,0.2);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--terracotta);
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+
+  .inline-note strong { font-weight: 600; }
+
+  /* SCROLL TOP */
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: var(--terracotta);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(224,50,122,0.4);
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .scroll-top.visible { opacity: 1; }
+
+  /* PLATFORM CHIPS */
+  .platform-chips {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .chip.tiktok { background: #111; color: white; }
+  .chip.instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); color: white; }
+  .chip.primary { background: var(--terracotta); color: white; }
+  .chip.secondary { background: var(--border); color: var(--muted); }
+
+
+  /* HOOK ITEM INTERNALS */
+  .hook-theme {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 4px;
+  }
+
+  .hook-text {
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  .hook-why {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.4;
+    border-top: 1px solid var(--border);
+    padding-top: 6px;
+    margin-top: 4px;
+  }
+
+  .hook-why-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: var(--sage);
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+
+  /* PILLAR 5 PLACEHOLDER */
+  .pillar5-placeholder {
+    text-align: center;
+    padding: 32px 20px;
+    background: var(--ink);
+    border-radius: 10px;
+  }
+
+  .pillar5-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .pillar5-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--cream);
+    margin-bottom: 10px;
+  }
+
+  .pillar5-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Meg<span>Talks</span>Sex</div>
+  <div class="nav-links">
+    <a href="#positioning" class="nav-link">Position</a>
+    <a href="#bios" class="nav-link">Bios</a>
+    <a href="#strategy" class="nav-link">Strategy</a>
+    <a href="#pillars" class="nav-link">Pillars</a>
+    <a href="#grid" class="nav-link">Grid</a>
+    <a href="#formats" class="nav-link">Formats</a>
+    <a href="#creators" class="nav-link">Creators</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Content Strategy Document</div>
+  <div class="hero-title">Meg<em>Talks</em><br>Sex</div>
+  <p class="hero-sub">Big sister energy. Zero shame. A decade of experience, a brand built to last, and the most underserved audience on the internet.</p>
+  <div class="sex-note">
+    📝 <span>Platform note: on TikTok, use <strong>"seggs"</strong> in captions/bio to avoid shadow restrictions on the word "sex" — same vibe, better reach</span>
+  </div>
+</div>
+
+<!-- POSITIONING -->
+<section id="positioning">
+  <div class="section-label">01 — Who You Are</div>
+  <div class="section-title">Positioning</div>
+  <p class="section-body">You're not building a sex education page. You're building the big sister people trust with their most embarrassing thoughts. That's how you hit millions.</p>
+
+  <div class="positioning-box">
+    <div class="label">Final Positioning Statement</div>
+    <div class="positioning-statement">MegTalksSex creates content for people who feel <em>disconnected, ashamed, or confused</em> about sex and intimacy, and want to experience real connection and sexual freedom without awkwardness, shame, or outdated scripts.</div>
+  </div>
+
+  <div class="bio-grid" style="margin-top: 24px;">
+    <div class="bio-card">
+      <div class="bio-card-label">Who you are</div>
+      <div class="bio-card-title">Sexual intimacy expert</div>
+      <p>A decade of experience blending education, humor, and real-world intimacy practices. Both expert and personal story are part of the brand — 100% open to sharing.</p>
+    </div>
+    <div class="bio-card">
+      <div class="bio-card-label">What you offer</div>
+      <div class="bio-card-title">Permission + Information</div>
+      <p>You help people unlearn shame, understand their desires, and build real intimacy and connection. You say the things people are too embarrassed to Google.</p>
+    </div>
+    <div class="bio-card">
+      <div class="bio-card-label">Why follow you</div>
+      <div class="bio-card-title">Big Sister Energy</div>
+      <p>Tell it how it is. No filter. A warm hug that leads you to a difficult conversation — gently nudged to the edge of the cliff, then you realize you can fly.</p>
+    </div>
+  </div>
+
+  <div style="margin-top: 24px;">
+    <div class="section-label" style="margin-bottom: 8px;">Your Audience</div>
+    <div class="audience-tags">
+      <div class="audience-tag">People wanting sexual openness</div>
+      <div class="audience-tag">Queer folks</div>
+      <div class="audience-tag">Women</div>
+      <div class="audience-tag">People over 40</div>
+      <div class="audience-tag">Neurodivergent people</div>
+      <div class="audience-tag">Survivors of abuse</div>
+      <div class="audience-tag">Singles & couples</div>
+      <div class="audience-tag">People wanting an awakening</div>
+    </div>
+  </div>
+
+  <div class="inline-note" style="margin-top: 20px;">
+    <strong>What you are NOT:</strong> tradwife content, misogyny, homophobia, capitalism, patriarchy, overconsumption. The brand is explicitly anticapitalist and anti-patriarchal.
+  </div>
+</section>
+
+<!-- TIKTOK BIOS -->
+<section id="bios">
+  <div class="section-label">02 — Platform</div>
+  <div class="section-title">TikTok Bio Options</div>
+  <p class="section-body">Three directions. Pick one, own it completely. The bio is the first 3 seconds of trust.</p>
+
+  <div class="platform-chips">
+    <div class="chip tiktok">TikTok — Primary</div>
+    <div class="chip instagram">Instagram — Secondary</div>
+  </div>
+
+  <div class="inline-note" style="margin-top: 16px;">
+    <strong>Seggs reminder:</strong> Use "seggs" in bio/captions instead of "sex" on TikTok to reduce algorithm suppression. Example: "Big sister seggs advice you actually needed." The audience knows. The algorithm doesn't flag it.
+  </div>
+
+  <div class="bio-options" style="margin-top: 20px;">
+    <div class="bio-option">
+      <div class="bio-option-num">Option 01</div>
+      <div class="bio-option-tag">Clean + scalable — best for growth</div>
+      <div class="bio-option-lines">
+        <div class="bio-line">Big sister seggs advice you actually needed</div>
+        <div class="bio-line">Unlearning shame + boring scripts</div>
+        <div class="bio-line">You're not broken, you're just conditioned</div>
+      </div>
+    </div>
+
+    <div class="bio-option">
+      <div class="bio-option-num">Option 02</div>
+      <div class="bio-option-tag">Most personality — best for brand recall</div>
+      <div class="bio-option-lines">
+        <div class="bio-line">Talking about things you're too embarrassed to Google</div>
+        <div class="bio-line">Seggs, intimacy, zero shame</div>
+        <div class="bio-line">Everybody has a butthole. Relax.</div>
+      </div>
+    </div>
+
+    <div class="bio-option">
+      <div class="bio-option-num">Option 03</div>
+      <div class="bio-option-tag">Slightly elevated — best for 40+ audience</div>
+      <div class="bio-option-lines">
+        <div class="bio-line">Helping you unlearn shame & experience real intimacy</div>
+        <div class="bio-line">Seggs, connection, and honest conversations</div>
+        <div class="bio-line">No scripts. No judgment.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGY -->
+<section id="strategy">
+  <div class="section-label">03 — Growth</div>
+  <div class="section-title">High-Level Strategy</div>
+  <p class="section-body">The fastest-growing sex and intimacy creators don't win on explicitness. They win on recognition. The content that spreads makes people think "oh my god, someone finally said it."</p>
+
+  <div class="stat-row">
+    <div class="stat-box">
+      <div class="stat-num">60%</div>
+      <div class="stat-label">Relatable / pattern interrupt</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">30%</div>
+      <div class="stat-label">Educational content</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">10%</div>
+      <div class="stat-label">Authority / frameworks</div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top: 24px; margin-bottom: 12px;">The Biggest Opportunities</div>
+
+  <div class="opp-tags">
+    <div class="opp-tag">The 40+ audience — almost unaddressed</div>
+    <div class="opp-tag">Humor as vehicle for hard truths</div>
+    <div class="opp-tag">Trauma + levity in the same space</div>
+    <div class="opp-tag">Neurodivergent + intimacy</div>
+    <div class="opp-tag">Post-divorce re-entry</div>
+    <div class="opp-tag">Queer-literate not just queer-coded</div>
+    <div class="opp-tag">Kink without sensationalism</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label" style="margin-bottom: 12px;">Why This Content Works</div>
+
+  <div class="psych-grid">
+    <div class="psych-card follow">
+      <div class="psych-q follow">Why people follow</div>
+      <div class="psych-answer">They're embarrassed to ask anyone in their real life. Meg becomes the person they can't have IRL. Once someone feels "she gets me," the follow is automatic. They're not following for information. They're following for permission.</div>
+    </div>
+    <div class="psych-card share">
+      <div class="psych-q share">Why people share</div>
+      <div class="psych-answer">Two triggers: private relatability ("I sent this to my partner and said nothing") and collective vindication ("everyone needs to see this"). Content that names something shameful and immediately normalizes it hits both. The share is the person's way of opening a conversation they couldn't start themselves.</div>
+    </div>
+    <div class="psych-card stay">
+      <div class="psych-q stay">What makes someone stay vs scroll</div>
+      <div class="psych-answer">The first three seconds need to either call them out specifically or say something slightly unexpected. People scroll when content feels generic. They stay when they feel personally addressed. Meg's natural tone does this without trying — the goal is just to get it on camera consistently.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section id="pillars">
+  <div class="section-label">04 — Content</div>
+  <div class="section-title">The 5 Content Pillars</div>
+  <p class="section-body">Five clear themes. Easy to create from consistently. Each one builds audience and trust simultaneously.</p>
+
+  <div class="pillars-grid">
+    <div class="pillar-card">
+      <div class="pillar-num">1</div>
+      <div>
+        <div class="pillar-name">Shame Detox</div>
+        <div class="pillar-desc">Naming the conditioning people carry without knowing it. Gender roles, religious messaging, family scripts. The "wait, that's why I think that?" content. Reframes personal shame as a systemic problem — both relieving and shareable.</div>
+        <div class="pillar-tags">
+          <div class="pillar-tag">Women 30–50</div>
+          <div class="pillar-tag">Survivors</div>
+          <div class="pillar-tag blush">Highest share potential</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-num">2</div>
+      <div>
+        <div class="pillar-name">The Honest Education</div>
+        <div class="pillar-desc">Information people needed decades ago but nobody gave them. Anatomy, arousal, neurodivergence, kink demystified, consent as practice. Clinical but never cold. Fills a genuine gap most people are too embarrassed to search.</div>
+        <div class="pillar-tags">
+          <div class="pillar-tag">Curious beginners</div>
+          <div class="pillar-tag">Neurodivergent folks</div>
+          <div class="pillar-tag gold">SEO / search value</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-num">3</div>
+      <div>
+        <div class="pillar-name">Big Sister Advice</div>
+        <div class="pillar-desc">Practical, no-filter takes on real situations. What to actually say when you want something different in bed. How to navigate mismatch with a partner. Actionable and rare in tone — the hardest pillar to replicate.</div>
+        <div class="pillar-tags">
+          <div class="pillar-tag">Couples</div>
+          <div class="pillar-tag">Dating re-entry</div>
+          <div class="pillar-tag blush">Converts to ebook</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-num">4</div>
+      <div>
+        <div class="pillar-name">Expanding the Script</div>
+        <div class="pillar-desc">Introducing people to things outside the cis-het default without making it weird. Kink, BDSM basics, queer relationship structures, solo sex as practice. Not performative. Just normalizing a wider menu. Directly tied to the ebook.</div>
+        <div class="pillar-tags">
+          <div class="pillar-tag">Queer-adjacent</div>
+          <div class="pillar-tag">Exploring couples</div>
+          <div class="pillar-tag gold">Ebook audience</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pillar-num">5</div>
+      <div>
+        <div class="pillar-name">Story & Experience</div>
+        <div class="pillar-desc">Her personal story, her journey, the moments that made her who she is. Not oversharing. Selective, purposeful, funny when appropriate. Expertise without story feels cold. This is the trust-builder. Makes everything else believable.</div>
+        <div class="pillar-tags">
+          <div class="pillar-tag">Retreat audience</div>
+          <div class="pillar-tag">Community builders</div>
+          <div class="pillar-tag blush">Long-term loyalty</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT GRID -->
+<section id="grid" class="funnel-section">
+  <div class="section-label">05 — Content Grid</div>
+  <div class="section-title">Hook Library by Funnel Stage</div>
+  <p class="section-body">Content ideas for each stage of the funnel, for each pillar. Each hook includes the theme, the hook itself, and why it works.</p>
+
+  <div class="funnel-tabs" style="margin-top: 20px;">
+    <button class="funnel-tab active" onclick="showStage('tofu', this)">TOFU — Reach</button>
+    <button class="funnel-tab" onclick="showStage('mofu', this)">MOFU — Trust</button>
+    <button class="funnel-tab" onclick="showStage('bofu', this)">BOFU — Authority</button>
+  </div>
+
+  <!-- TOFU -->
+  <div class="funnel-stage active" id="tofu">
+    <div class="funnel-stage-header">
+      <div class="funnel-badge tofu">TOFU</div>
+      <div class="funnel-stage-desc">Attract new people. Call-outs, relatable truths, myths, bold statements, pattern interrupts.</div>
+    </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 1 — Shame Detox</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">Vulva appearance</div>
+              <div class="hook-text">Men don’t actually care what your vulva looks like… women do.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Contrarian + slightly controversial. Flips expectation and creates tension.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Vaginal smell</div>
+              <div class="hook-text">If you smell like nothing… that’s actually the problem.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Pattern interrupt + shock. Breaks a deeply held assumption.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Body hair</div>
+              <div class="hook-text">You’ve been removing hair your body literally grew on purpose.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + subtle rebellion. Makes people question conditioning.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Belly / stomach during sex</div>
+              <div class="hook-text">You’ve been sucking in instead of feeling anything.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Callout + uncomfortable truth. Immediate self-recognition.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Needing lube</div>
+              <div class="hook-text">Your body not reacting instantly doesn’t mean it’s broken.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Myth-busting + emotional relief. Removes silent insecurity.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Never having had one</div>
+              <div class="hook-text">People will fake this for YEARS and never say a word.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Shock + secrecy. Feels like insider truth.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Crying after orgasm</div>
+              <div class="hook-text">No one tells you this can happen… and then it does.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Curiosity loop. Creates “wait, what?” moment.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Orgasming “too fast”</div>
+              <div class="hook-text">You think finishing fast is embarrassing… it’s actually information.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + intrigue. Turns shame into insight.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Unexpected body response (squirting)</div>
+              <div class="hook-text">You thought something went wrong… your body was actually doing its job.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Tension → relief. Resolves fear instantly.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">High sex drive (women)</div>
+              <div class="hook-text">You’ve been told to shrink something that isn’t a problem.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Identity + rebellion. Empowers and validates.</div>
+            </div>
+            <div id="tofu-p1-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Fantasizing about someone else</div>
+              <div class="hook-text">You’ve had a thought and immediately felt guilty for it.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> High relatability. Hits internal shame instantly.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Desire during stress/grief</div>
+              <div class="hook-text">Your body doesn’t process stress the way you think it does.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Curiosity + neuroscience angle. Feels intelligent and surprising.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Masturbation</div>
+              <div class="hook-text">You learned about your own body in secret… not by accident.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Soft shock + shared experience. Creates connection.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">First experience felt wrong</div>
+              <div class="hook-text">That didn’t feel right… and no one ever explained why.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Emotional tension. Pulls people into unfinished story.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Identifying as queer</div>
+              <div class="hook-text">You’ve had a thought and then immediately shut it down.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Internal conflict. Deep relatability.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Figuring it out later in life</div>
+              <div class="hook-text">You’re realizing things now you were never allowed to before.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Identity shift + awakening. Strong emotional pull.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Threesome / group curiosity</div>
+              <div class="hook-text">You’ve been curious… but you’re more afraid of what it means.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Psychological tension. Safe but intriguing.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Role-play</div>
+              <div class="hook-text">You’ve imagined something and then judged yourself for it.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Internal exposure. Makes people feel seen.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Age gap attraction</div>
+              <div class="hook-text">You’re attracted to someone and immediately question yourself.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Relatable + slightly taboo. High engagement potential.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">BDSM curiosity</div>
+              <div class="hook-text">You’re not scared of it… you’re scared of being judged for it.</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + identity. Reduces fear, builds curiosity.</div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('tofu-p1-extra', this)">+ Show all 20 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 2 — The Honest Education</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">Anatomy</div>
+              <div class="hook-text">Why doesn’t penetration alone work for most women?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Directly addresses one of the biggest misunderstandings in sex education.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anatomy</div>
+              <div class="hook-text">What actually causes an orgasm biologically?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. People think they know, but most don’t understand the mechanism.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anatomy</div>
+              <div class="hook-text">Why does lubrication change even when you feel turned on?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Separates arousal from assumptions. Highly misunderstood.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anatomy</div>
+              <div class="hook-text">What part of the body is actually responsible for pleasure?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Core anatomy misunderstanding. Foundational education.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anatomy</div>
+              <div class="hook-text">What is the clitoris actually and how big is it?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Still widely unknown. High share and save potential.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anatomy</div>
+              <div class="hook-text">Why does your body not “cooperate” sometimes?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Reframes frustration into understanding.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Orgasm</div>
+              <div class="hook-text">Why can you orgasm alone but not with a partner?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Extremely common but rarely explained properly.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Orgasm</div>
+              <div class="hook-text">Why does pressure make it harder?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Introduces nervous system awareness in a practical way.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Orgasm</div>
+              <div class="hook-text">Why does it feel different with different partners?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Normalizes variation and removes comparison-based shame.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Arousal vs Desire</div>
+              <div class="hook-text">What actually turns people on biologically vs emotionally?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Most people don’t understand dual pathways of arousal.</div>
+            </div>
+            <div id="tofu-p2-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Menopause / Aging</div>
+              <div class="hook-text">What actually happens to your body during perimenopause?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Huge gap in education for women 40+.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Menopause / Aging</div>
+              <div class="hook-text">Why does desire change during menopause?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Directly relevant and rarely explained clearly.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Menopause / Aging</div>
+              <div class="hook-text">Why does dryness happen and what actually helps?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Practical, high-value, often ignored topic.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Menopause / Aging</div>
+              <div class="hook-text">Why does sex sometimes become uncomfortable later in life?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Validates real experiences that are rarely discussed openly.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Menopause / Aging</div>
+              <div class="hook-text">What are realistic expectations for intimacy after 40?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Removes unrealistic standards and builds trust.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Neurodivergence</div>
+              <div class="hook-text">How does ADHD affect intimacy and attention?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. High relatability for neurodivergent audiences.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Neurodivergence</div>
+              <div class="hook-text">Why does your brain wander during sex?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Normalizes a common but rarely discussed experience.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Neurodivergence</div>
+              <div class="hook-text">Why does overstimulation shut things down?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Connects sensory processing to intimacy.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Neurodivergence</div>
+              <div class="hook-text">How do you communicate needs when they’re hard to explain?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Practical and deeply needed for ND audiences.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Communication</div>
+              <div class="hook-text">How do you handle mismatched desire?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. One of the most common relationship issues.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Porn vs Reality</div>
+              <div class="hook-text">What is actually realistic and what isn’t?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Resets expectations shaped by unrealistic exposure.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Porn vs Reality</div>
+              <div class="hook-text">Why does it feel less natural than expected?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Addresses silent confusion many people carry.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Curiosity</div>
+              <div class="hook-text">What does “kink” actually mean in practice?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Removes stigma and confusion.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Curiosity</div>
+              <div class="hook-text">Why are people drawn to power dynamics?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Explains curiosity without judgment.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Curiosity</div>
+              <div class="hook-text">What does safe exploration actually look like?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Practical entry point into a misunderstood space.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Curiosity</div>
+              <div class="hook-text">What is a boundary vs a preference?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Critical distinction most people don’t understand.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Curiosity</div>
+              <div class="hook-text">What does “no yucking someone’s yum” actually mean?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Cultural principle that builds openness and acceptance.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">“Is This Normal”</div>
+              <div class="hook-text">Is it normal to want it a lot?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Counters long-standing shame, especially for women.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">“Is This Normal”</div>
+              <div class="hook-text">Is it normal to feel emotional after?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Rarely discussed but highly relatable.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationships</div>
+              <div class="hook-text">How do you rebuild connection after distance?</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Massive gap. Directly tied to long-term relationship challenges.</div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('tofu-p2-extra', this)">+ Show all 30 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 3 — Big Sister Advice</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">Reciprocity</div>
+              <div class="hook-text">If he won’t reciprocate, stop volunteering</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Direct, slightly controversial. Triggers immediate reaction and shareability</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Reciprocity</div>
+              <div class="hook-text">Reciprocity is not optional, it’s the baseline</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clear standard-setting. Strong, memorable, repeatable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Reciprocity</div>
+              <div class="hook-text">You should not have to earn basic effort</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe that removes overgiving patterns</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Reciprocity</div>
+              <div class="hook-text">If he’s not curious about you, that’s the problem</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Specific behavior callout. Easy to recognize</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Reciprocity</div>
+              <div class="hook-text">If he never asks what you like, stop performing</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Sharp, actionable, slightly confrontational</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Reciprocity</div>
+              <div class="hook-text">You’re not hard to please, you’re just not being met</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Removes shame. Highly relatable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Oral / Reciprocity</div>
+              <div class="hook-text">If he won’t reciprocate, stop volunteering</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Tied to a specific act. High engagement + “send this” energy</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Oral / Boundaries</div>
+              <div class="hook-text">You are allowed to say no if it’s not mutual</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Empowering, clear boundary framing</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Oral / Boundaries</div>
+              <div class="hook-text">You don’t owe anyone access to your body</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Strong boundary statement. Broad relevance</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Oral / Red Flags</div>
+              <div class="hook-text">If he treats it like a favor, that’s a red flag</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe that shifts power dynamic</div>
+            </div>
+            <div id="tofu-p3-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Oral / Boundaries</div>
+              <div class="hook-text">If you’re uncomfortable, that’s the end of the conversation</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clear, no-negotiation boundary</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anal / Boundaries</div>
+              <div class="hook-text">If you feel pressured into it, that’s already your answer</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> High relatability. Validates gut instinct</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anal / Safety</div>
+              <div class="hook-text">If he’s not prioritizing your comfort, it’s a no</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Safety-first framing. Strong authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anal / Consent</div>
+              <div class="hook-text">Curiosity is fine, pressure is not</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clean distinction. Easy to remember</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anal / Consent</div>
+              <div class="hook-text">If there’s no communication, there’s no consent</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Strong, direct, foundational principle</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anal / Boundaries</div>
+              <div class="hook-text">If you’re anxious about it, listen to that</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Encourages body awareness over pressure</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anal / Safety</div>
+              <div class="hook-text">This is not something you rush</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Slows people down. Authority through clarity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Communication</div>
+              <div class="hook-text">“That doesn’t feel good, can we try something else?”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Practical script. Immediately usable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Communication</div>
+              <div class="hook-text">“I’m still figuring this out, so I need patience”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Soft but clear. Builds confidence in speaking up</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Men / Behavior</div>
+              <div class="hook-text">If he gets defensive, that’s your answer</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Pattern recognition. Cuts through confusion</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Women / Patterns</div>
+              <div class="hook-text">If you’re managing his ego, you’re not being honest</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Confrontational truth. High share potential</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Dating 40+</div>
+              <div class="hook-text">You don’t need to lower your standards, you need to raise your clarity</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Empowering, identity-based reframe</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Dating 40+</div>
+              <div class="hook-text">You’re allowed to walk away quickly</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Encourages decisive behavior. Strong tone</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Boundaries</div>
+              <div class="hook-text">No is a complete sentence</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Classic, punchy, highly repeatable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Boundaries</div>
+              <div class="hook-text">You don’t need permission to say no</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reinforces autonomy. Broad applicability</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Boundaries</div>
+              <div class="hook-text">If they push back, that’s information</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe. Turns conflict into clarity</div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('tofu-p3-extra', this)">+ Show all 26 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 4 — Expanding the Script</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Desire</div>
+              <div class="hook-text">“You’re not ‘low desire’… you were just never taught how to feel it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + identity disruption</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Sex</div>
+              <div class="hook-text">“Most of what you think is ‘normal’ was built around men… not you”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Confrontational + perspective shift</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Experience</div>
+              <div class="hook-text">“You’ve probably been performing more than you’ve been feeling”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Slightly accusatory → stops scroll</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Standards</div>
+              <div class="hook-text">“You’re not hard to please… you’ve just been working with a low bar”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Empowering + sharp</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Awareness</div>
+              <div class="hook-text">“No one told you to center yourself… so you didn’t”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Simple, heavy realization</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Gender Norms</div>
+              <div class="hook-text">“Submission isn’t empowerment… if you never had a real choice”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Controversial + layered</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Gender Norms</div>
+              <div class="hook-text">“That ‘soft life’ you’re seeing? Look closer at who holds the power”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Calls out trend culture</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Gender Norms</div>
+              <div class="hook-text">“Dependence feels safe… until you need options”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Tension + future risk</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Gender Norms</div>
+              <div class="hook-text">“You don’t need to shrink to be chosen”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Emotional + highly shareable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Gender Norms</div>
+              <div class="hook-text">“You can be feminine and still be in control”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Expands identity safely</div>
+            </div>
+            <div id="tofu-p4-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Anti-Capitalism / Dating</div>
+              <div class="hook-text">“You’re dating like you’re a product… and it’s exhausting you”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Pattern interrupt + modern</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anti-Capitalism / Dating</div>
+              <div class="hook-text">“Dating turned into metrics… and now no one feels anything”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Cultural critique + relatable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anti-Capitalism / Worth</div>
+              <div class="hook-text">“You don’t need to optimize yourself to be worthy”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Rejects pressure → relief</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anti-Capitalism / Pressure</div>
+              <div class="hook-text">“You’re not behind… you’re just not playing that game”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + identity shift</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anti-Capitalism / Identity</div>
+              <div class="hook-text">“Your value is not your desirability… no matter what you’ve been told”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Core belief disruption</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anti-Capitalism / Culture</div>
+              <div class="hook-text">“You don’t have to live your life for the algorithm”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Modern + anti-trend</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anti-Capitalism / Intimacy</div>
+              <div class="hook-text">“If intimacy feels like a competition… something is off”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Diagnostic + simple</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anti-Capitalism / Dating</div>
+              <div class="hook-text">“You don’t need to market yourself to be chosen”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Punchy, viral phrasing</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Queer / Curiosity</div>
+              <div class="hook-text">“You can be mostly straight… and still curious”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Normalizes nuance</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Queer / Identity</div>
+              <div class="hook-text">“You don’t need a label to explore something real”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Removes pressure</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Queer / Timing</div>
+              <div class="hook-text">“Curiosity is not a crisis”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Short, sticky, repeatable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationship Structures</div>
+              <div class="hook-text">“Monogamy is an option… not a rule”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Disrupts default thinking</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationship Structures</div>
+              <div class="hook-text">“Some people are not built for one partner forever… and that’s real”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Slightly controversial</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationship Structures</div>
+              <div class="hook-text">“Jealousy is something you can understand… not just react to”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Adds depth</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationship Structures</div>
+              <div class="hook-text">“You can design your relationship… instead of inheriting it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Empowering</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationship Structures</div>
+              <div class="hook-text">“What works for you might not look like anyone else’s life”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Expansive + safe</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationship Structures</div>
+              <div class="hook-text">“Commitment doesn’t have one shape”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Simple + sticky</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Cougars / Age</div>
+              <div class="hook-text">“Older women liking younger men isn’t weird… it’s just judged differently”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Flips stigma</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Cougars / Desire</div>
+              <div class="hook-text">“Desire doesn’t expire… the narrative does”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Memorable + punchy</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Single / Identity</div>
+              <div class="hook-text">“Being single is not a waiting room”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Strong reframe</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Childfree / Choice</div>
+              <div class="hook-text">“Childfree is not a lack… it’s a decision”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Removes deficit framing</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Non-Traditional Life</div>
+              <div class="hook-text">“You don’t have to build your life around a family model”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Expands options</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Non-Traditional Life</div>
+              <div class="hook-text">“Being alone and being lonely are not the same thing”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Familiar but still strong</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Non-Traditional Life</div>
+              <div class="hook-text">“Different doesn’t mean less”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Simple, shareable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Solo Sex / Ownership</div>
+              <div class="hook-text">“If you don’t know your body… you’re guessing”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Direct + slightly harsh</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Solo Sex / Awareness</div>
+              <div class="hook-text">“The more you know your body… the less you settle”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Cause-effect clarity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Solo Sex / Power</div>
+              <div class="hook-text">“You’re allowed to prioritize your own experience”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Empowering</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Culture / Myth</div>
+              <div class="hook-text">“Body count is not real… but the shame around it is”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Controversial + scroll stop</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Culture / Desire</div>
+              <div class="hook-text">“One person doesn’t always meet every version of you”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Expands relationship thinking</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Culture / Acceptance</div>
+              <div class="hook-text">“Don’t yuck someone’s yum… just admit it’s not yours”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Internet-native + sticky</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Culture / Family</div>
+              <div class="hook-text">“The ‘traditional family’ was built on economics… not just love”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Big idea + curiosity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Identity / Autonomy</div>
+              <div class="hook-text">“Choosing yourself will feel wrong… because you weren’t taught to”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Emotional + deep</div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('tofu-p4-extra', this)">+ Show all 42 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 5 — Story & Experience</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+            <div class="pillar5-placeholder">
+              <div class="pillar5-icon">✍️</div>
+              <div class="pillar5-title">Your stories. Your voice.</div>
+              <p class="pillar5-desc">This pillar is reserved for Meg's personal storytelling. These hooks can't be pre-written — they come from lived experience, real moments, and things only Meg can say. The content for this pillar gets created as the brand grows.</p>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- MOFU -->
+  <div class="funnel-stage" id="mofu">
+    <div class="funnel-stage-header">
+      <div class="funnel-badge mofu">MOFU</div>
+      <div class="funnel-stage-desc">Build connection and trust. Deeper insights, storytelling, personal experiences, "this is why" content.</div>
+    </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 1 — Shame Detox</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Conditioning</div>
+              <div class="hook-text">You were taught to be desirable, not to actually feel desire — and that disconnect doesn’t fix itself</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframes personal struggle as systemic. Builds authority + removes self-blame.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Sex Ed / Abstinence Gaps</div>
+              <div class="hook-text">Most of what you learned about sex was about avoiding it… not understanding your own body</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Calls out a shared failure. High relatability + credibility.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Sex Ed / Abstinence Gaps</div>
+              <div class="hook-text">Abstinence-only education didn’t just leave things out — it left people unprepared for real experiences</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Slightly contrarian, positions her as filling a real gap.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Survivors / Nervous System</div>
+              <div class="hook-text">If your body reacts in ways you don’t understand, it usually learned that response somewhere</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Trauma-informed without being explicit. Builds safety + trust.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Survivors / Nervous System</div>
+              <div class="hook-text">That feeling of disconnect isn’t random — your body is trying to protect you</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Validates experience + introduces nervous system awareness.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Survivors / Shame</div>
+              <div class="hook-text">When something feels off and you blame yourself… that’s not where the story started</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Gently redirects self-blame. Emotionally powerful.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Survivors / Body Response</div>
+              <div class="hook-text">Your body shutting down doesn’t mean something is wrong — it means something didn’t feel safe</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clear, grounded, removes “broken” narrative.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Survivors / Pressure</div>
+              <div class="hook-text">Your body doesn’t respond well under pressure — especially if it learned pressure early on</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Connects past experience to present reactions.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Survivors / Safety</div>
+              <div class="hook-text">You can’t force your body to feel safe — especially if it learned not to</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Honest, authority-building. Sets realistic expectations.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Porn vs Reality</div>
+              <div class="hook-text">A lot of what you think is “normal” didn’t come from real-life experiences</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Soft callout of porn influence without alienating audience.</div>
+            </div>
+            <div id="mofu-p1-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Porn vs Reality</div>
+              <div class="hook-text">You’ve been comparing yourself to something that was never meant to be realistic</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> High relatability + relief. Reduces comparison shame.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Porn vs Reality</div>
+              <div class="hook-text">Most people think they’re doing something wrong — they’re just copying unrealistic patterns</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe that removes blame + builds authority.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Porn vs Reality</div>
+              <div class="hook-text">What confidence looks like in real life is very different from what you’ve been shown</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Breaks illusion. Builds trust through honesty.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Porn vs Reality</div>
+              <div class="hook-text">Comparison didn’t come from nowhere — it was learned through repetition over time</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Explains behavior → increases self-awareness.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Social Conditioning</div>
+              <div class="hook-text">You’ve been prioritizing being liked over being honest — and that shows up here too</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Cross-context insight. Feels deeply accurate.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Guilt vs Shame</div>
+              <div class="hook-text">You think you did something wrong, but what you’re actually feeling is shame — and those aren’t the same</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Educational + practical. Builds authority.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Guilt vs Shame</div>
+              <div class="hook-text">Shame sticks because it becomes identity, not just a feeling</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Explains why it’s hard to change. Deepens trust.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Guilt vs Shame</div>
+              <div class="hook-text">Understanding shame doesn’t automatically remove it — that’s why people stay stuck</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Slightly contrarian. Positions her as experienced.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Unlearning</div>
+              <div class="hook-text">When shame isn’t running the show anymore, your body feels different — not just your thoughts</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Embodied insight. Feels real, not theoretical.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Cheating / Shame</div>
+              <div class="hook-text">Being cheated on doesn’t just break trust — it makes you question yourself in ways that linger</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Highly relatable. Strong emotional authority.</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Survivors / Relationships</div>
+              <div class="hook-text">A lot of people blame themselves for things they never had control over — and it shows up later in relationships</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Connects past → present. Builds deep trust.</div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('mofu-p1-extra', this)">+ Show all 21 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 2 — The Honest Education</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">Hormones / Perimenopause</div>
+              <div class="hook-text">If you feel like your body changed overnight… it probably didn’t. You just weren’t told what perimenopause looks like</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved, large impact. Pattern recognition + relief</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Hormones / Perimenopause</div>
+              <div class="hook-text">You don’t suddenly “lose desire”… your hormones change how your body responds and no one explains that part</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved, large impact. Reframe + removes blame</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Hormones / Perimenopause</div>
+              <div class="hook-text">If things feel drier, slower, or different… it’s not you, it’s hormonal shifts no one prepared you for</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved, large impact. Specific + validating</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Hormones / Perimenopause</div>
+              <div class="hook-text">You’re trying to use a 25-year-old body playbook on a 45-year-old body</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved, large impact. Sharp, memorable, slightly confronting</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Hormones / Perimenopause</div>
+              <div class="hook-text">When your sleep, stress, and hormones are off… your body is not going to respond the same way</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved, large impact. Systems thinking made simple</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Hormones / Perimenopause</div>
+              <div class="hook-text">If your body feels more sensitive, reactive, or unpredictable lately… your nervous system is part of the story</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved, large impact. Adds depth beyond hormones</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Medical Gaps</div>
+              <div class="hook-text">“Everything looks normal” is one of the most unhelpful things you can hear when something feels off</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Builds trust. Calls out real frustration</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Medical Gaps</div>
+              <div class="hook-text">If no one has checked your hormones, thyroid, or iron… you might be solving the wrong problem</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Authority + practical direction</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Medical Gaps</div>
+              <div class="hook-text">Pain during sex is common, but it’s not something you’re supposed to just live with</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Strong corrective. High emotional resonance</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Medical Gaps</div>
+              <div class="hook-text">A lot of people don’t realize pelvic floor issues are the reason things feel off</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Insight + awareness</div>
+            </div>
+            <div id="mofu-p2-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Body / Health</div>
+              <div class="hook-text">You can get a “clear” mammogram and still not understand what’s going on in your body</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clarifies limits. Builds credibility</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Body / Health</div>
+              <div class="hook-text">Most people don’t know what to actually look for in their own body until something feels wrong</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Awareness gap + authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Body / Health</div>
+              <div class="hook-text">Knowing what not to panic about is just as important as knowing what to check</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Calming + expert positioning</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Identity / Queer Exploration</div>
+              <div class="hook-text">Realizing something about yourself later in life doesn’t mean it just started… it means you finally noticed</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Deep emotional pull</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Identity / Conditioning</div>
+              <div class="hook-text">You didn’t ignore the signs… you were taught not to see them</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + systemic lens</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Exploration / Kink</div>
+              <div class="hook-text">Curiosity doesn’t mean something is wrong… it usually means something hasn’t been explored yet</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Normalization + intrigue</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Exploration / Kink</div>
+              <div class="hook-text">People think exploration means going extreme… it actually starts with understanding what you feel</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + safety</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Exploration / Kink</div>
+              <div class="hook-text">If you can’t talk about it, you’re not ready to explore it</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clear boundary + authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationships</div>
+              <div class="hook-text">Avoidance feels easier than conflict… until it slowly kills connection</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Strong, memorable truth</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Stress / Life</div>
+              <div class="hook-text">Your body does not separate stress from intimacy… it just shuts things down</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Foundational insight</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Stress / Life</div>
+              <div class="hook-text">Grief doesn’t have one response… it can increase desire or completely shut it off</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved. Unexpected truth</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Stress / Regulation</div>
+              <div class="hook-text">You can’t push your body into connection when it’s trying to stay safe</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Nervous system authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Confidence</div>
+              <div class="hook-text">Confidence is not what makes things better… safety is what allows confidence to exist</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Contrarian. Strong positioning</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Confidence</div>
+              <div class="hook-text">If you’re waiting to feel confident first, you’re skipping the step that actually matters</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + guidance</div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('mofu-p2-extra', this)">+ Show all 24 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 3 — Big Sister Advice</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">Nerve Endings / Sensation</div>
+              <div class="hook-text">“Stop going straight for the obvious… try this instead” moves close to ear “the ear has thousands of nerve endings and most people completely ignore it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Pattern interrupt + curiosity + unexpected body fact</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anticipation / Build-Up</div>
+              <div class="hook-text">“If you’re skipping this area, you’re skipping half the experience” hand moves to inner thigh</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Calls out a mistake + creates immediate curiosity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Nervous System / Touch</div>
+              <div class="hook-text">“This one spot controls way more than you think” touches lower back “and most people rush right past it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Mystery → reveal → authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Sensation Contrast</div>
+              <div class="hook-text">“More pressure is not better… contrast is” ice cube visual or hands “your body responds to change, not intensity”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Contrarian + visual + actionable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Full-Body Arousal</div>
+              <div class="hook-text">“You’re focusing on one area and ignoring your entire body” gestures across body</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Confrontational but relatable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Arousal Layers</div>
+              <div class="hook-text">“If you’re rushing this part… that’s why it’s not hitting the same”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Direct cause → effect hook</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Arousal Timing</div>
+              <div class="hook-text">“Your body is not slow… you’re just moving too fast for it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + removes blame</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Clitoral Stimulation</div>
+              <div class="hook-text">“Going in too fast is the reason it stops feeling good”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Calls out a common mistake bluntly</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Overstimulation</div>
+              <div class="hook-text">“If it suddenly feels numb… it’s not you, it’s overstimulation”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Names a confusing experience clearly</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Orgasm (Women)</div>
+              <div class="hook-text">“Fast doesn’t mean better… it usually means incomplete”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Contrarian + tension</div>
+            </div>
+            <div id="mofu-p3-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Penetration Reality</div>
+              <div class="hook-text">“If this is all you’re doing… that’s the problem”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Bold + slightly confrontational</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Penetration Technique</div>
+              <div class="hook-text">“It’s not speed… it’s angle”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Short, punchy, memorable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Arousal Readiness</div>
+              <div class="hook-text">“If your body isn’t ready, nothing after this will fix it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Stakes + clarity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Tension / Resistance</div>
+              <div class="hook-text">“If your body is resisting… listen to it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Emotional + physical alignment</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Breath / Nervous System</div>
+              <div class="hook-text">“You’re probably doing this wrong without realizing it” holds breath vs exhales</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Pattern interrupt + self-awareness</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Touch / Technique</div>
+              <div class="hook-text">“Doing less here will actually feel like more”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Contrarian + curiosity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Hands / Awareness</div>
+              <div class="hook-text">“Where your hands go matters more than you think”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Simple but opens loop</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Exploration</div>
+              <div class="hook-text">“You’re allowed to be curious without committing to anything… those are not the same thing”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Removes pressure. Normalizes exploration without identity crisis</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Exploration</div>
+              <div class="hook-text">“Start smaller than you think… your body will tell you the truth real fast”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Grounded, slightly blunt. Encourages safe pacing</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">40+ / Body Changes</div>
+              <div class="hook-text">“What used to work not working anymore? That’s not you doing something wrong”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Immediate relief. Highly relatable for 40+</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">40+ / Hormones</div>
+              <div class="hook-text">“You’re not ‘losing it’… your body just changed the rules on you”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + slightly confrontational phrasing</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">40+ / Adjustment</div>
+              <div class="hook-text">“You don’t need to panic… you need to adjust”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Simple, directive, calming but firm</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Neurodivergence</div>
+              <div class="hook-text">“Your brain might need novelty, not repetition… that’s why the same thing stops working”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Specific, insightful, highly relatable for ND audience</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Neurodivergence</div>
+              <div class="hook-text">“You don’t need to fix it… you need to understand how your brain works”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Removes shame. Positions her as guide, not fixer</div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('mofu-p3-extra', this)">+ Show all 24 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 4 — Expanding the Script</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Conditioning</div>
+              <div class="hook-text">“You were trained to tolerate discomfort… especially in sex”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Hits fast. Calls out conditioning people feel but haven’t named</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Orgasm Gap</div>
+              <div class="hook-text">“The orgasm gap isn’t confusing… it’s the system working exactly how it was designed”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Bold + systemic. Reframes a known issue with edge</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Performance</div>
+              <div class="hook-text">“Being ‘good in bed’ usually just means you’re prioritizing him”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Confrontational. Forces self-reflection</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Desire</div>
+              <div class="hook-text">“Female desire gets suppressed… because it’s harder to control”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Slightly dangerous idea. High curiosity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Autonomy</div>
+              <div class="hook-text">“You were taught to be wanted… not to want”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Short, punchy, viral-ready</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Threat</div>
+              <div class="hook-text">“A sexually confident woman is still treated like a problem”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Social truth. Highly relatable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Baseline</div>
+              <div class="hook-text">“Male pleasure is the baseline… yours is the bonus”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Simple, sharp, hard to ignore</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Reality</div>
+              <div class="hook-text">“A lot of women have never actually experienced sex built around them”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Quiet but devastating. Deep resonance</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Desirability</div>
+              <div class="hook-text">“Desirability is currency… and you’ve been taught to earn it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Modern + systemic. Very shareable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Beauty</div>
+              <div class="hook-text">“You weren’t taught to feel sexy… you were taught to look it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clean, cutting distinction</div>
+            </div>
+            <div id="mofu-p4-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Conditioning</div>
+              <div class="hook-text">“Your sexuality was shaped by what gets rewarded… not what feels good”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + awareness</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Worth</div>
+              <div class="hook-text">“Your self-worth got tied to being wanted… not being satisfied”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Emotional + systemic</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Pressure</div>
+              <div class="hook-text">“Trying to be ‘hot’ is why you feel disconnected from your body”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Pattern interrupt + relatability</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Validation</div>
+              <div class="hook-text">“When desire becomes validation… it stops being about you”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Subtle but powerful shift</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Queer / Conditioning</div>
+              <div class="hook-text">“A lot of people aren’t as straight as they think… they just never questioned it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Slightly controversial. Stops scroll</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Queer / Default</div>
+              <div class="hook-text">“Heterosexuality is assumed… not examined”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clean, intellectual but accessible</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Queer / Suppression</div>
+              <div class="hook-text">“Curiosity gets shut down early… because it threatens the script”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Explains internal conflict</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Queer / Fluidity</div>
+              <div class="hook-text">“Attraction is way more fluid than you were taught”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Expansive + freeing</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationship Structures</div>
+              <div class="hook-text">“Monogamy is normalized… not because it works for everyone”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Disrupts default without attacking</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationship Structures</div>
+              <div class="hook-text">“Commitment got reduced to exclusivity… and that’s not the same thing”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe. Thought-provoking</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationship Structures</div>
+              <div class="hook-text">“Needs change over time… but the structure is expected to stay the same”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Real tension. High relatability</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Age / Desire</div>
+              <div class="hook-text">“Older women don’t lose desire… they lose the need for approval”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Strong, empowering, viral-ready</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Age / Power</div>
+              <div class="hook-text">“The power shift happens when you stop needing to be chosen”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Identity shift. Big energy</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Age / Suppression</div>
+              <div class="hook-text">“Age doesn’t limit desire… shame does”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Punchy + memorable</div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('mofu-p4-extra', this)">+ Show all 24 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 5 — Story & Experience</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+            <div class="pillar5-placeholder">
+              <div class="pillar5-icon">✍️</div>
+              <div class="pillar5-title">Your stories. Your voice.</div>
+              <p class="pillar5-desc">This pillar is reserved for Meg's personal storytelling. These hooks can't be pre-written — they come from lived experience, real moments, and things only Meg can say. The content for this pillar gets created as the brand grows.</p>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- BOFU -->
+  <div class="funnel-stage" id="bofu">
+    <div class="funnel-stage-header">
+      <div class="funnel-badge bofu">BOFU</div>
+      <div class="funnel-stage-desc">Show expertise and drive action. Frameworks, step-by-step breakdowns, tactical advice, ebook teasers.</div>
+    </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 1 — Shame Detox</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">Shame Framework</div>
+              <div class="hook-text">There’s a difference between what you were taught and what you’ve actually experienced, and most people never separate the two</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Builds authority by introducing a core distinction people haven’t considered</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Shame Framework</div>
+              <div class="hook-text">If you don’t question where a belief came from, you’ll keep living like it’s true</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Direct and slightly confronting, pushes self-awareness</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Shame Framework</div>
+              <div class="hook-text">Most people don’t realize their shame follows a pattern, and once you see it, you can interrupt it</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Introduces a repeatable model, positions her as someone with a system</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Shame Framework</div>
+              <div class="hook-text">The fastest way out of shame is not confidence, it is awareness in real time</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Contrarian, cuts through generic advice</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Shame Framework</div>
+              <div class="hook-text">You don’t get out of shame by avoiding it, you get out by understanding how it works</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Grounded, experience-based authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Shame Framework</div>
+              <div class="hook-text">The moment you can name what’s happening, you stop thinking it’s just you</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Practical and empowering, gives immediate value</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Self-Inquiry</div>
+              <div class="hook-text">Most people don’t ask themselves the right questions, and that’s why nothing changes</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframes stagnation as a process issue, not a personal flaw</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Self-Inquiry</div>
+              <div class="hook-text">If you’ve never asked where a belief came from, you’re still operating inside it</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Encourages reflection and deeper thinking</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Body and Pressure</div>
+              <div class="hook-text">Pressure shuts your body down faster than anything else, and most people don’t recognize it</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Highly practical, connects behavior to outcome</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Body and Shutdown</div>
+              <div class="hook-text">When your body shuts down, the worst thing you can do is push through it</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clear guidance, trauma-aware without being clinical</div>
+            </div>
+            <div id="bofu-p1-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Body and Safety</div>
+              <div class="hook-text">If your body doesn’t feel safe, nothing else matters, and most people skip that step</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Foundational principle, strong authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Survivors</div>
+              <div class="hook-text">There are things I will never tell someone who has experienced trauma, because they don’t work</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Strong authority with curiosity built in</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Survivors</div>
+              <div class="hook-text">Consent and feeling safe are not the same thing, and confusing them causes problems</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Nuanced, builds credibility</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Survivors</div>
+              <div class="hook-text">Healing does not look like pushing forward, it looks like rebuilding safety first</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Counters hustle mindset, builds trust</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Survivors</div>
+              <div class="hook-text">Safety is not one moment, it is something your body learns over time</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Sets realistic expectations, grounded</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Sex Ed Rebuild</div>
+              <div class="hook-text">If I rebuilt sex ed, the first thing I’d teach is how your body actually responds, not how to avoid it</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clear point of view, thought leadership</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Sex Ed Rebuild</div>
+              <div class="hook-text">Most people are working with incomplete information and blaming themselves for it</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Removes shame, builds connection</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Sex Ed Rebuild</div>
+              <div class="hook-text">If no one taught you how your body works, you are not behind, you are starting where most people are</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Normalizes and reassures</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Communication</div>
+              <div class="hook-text">Hinting does not work, if you want something different you have to say it clearly</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Direct, actionable, no fluff</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Communication</div>
+              <div class="hook-text">Most people struggle to communicate because they have never practiced saying things out loud</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe from fear to lack of practice</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Communication</div>
+              <div class="hook-text">If you cannot talk about sex, your sex life will stay exactly where it is</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Bold, slightly uncomfortable truth</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Communication</div>
+              <div class="hook-text">The check-in most couples avoid is the one that would actually change things</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Pattern recognition, curiosity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Porn vs Reality</div>
+              <div class="hook-text">Most people are trying to match something they have only seen, not experienced</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Soft but sharp critique</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Porn vs Reality</div>
+              <div class="hook-text">Real intimacy does not look like what you have been shown, and that disconnect matters</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe expectations</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationships</div>
+              <div class="hook-text">If there is</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> </div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('bofu-p1-extra', this)">+ Show all 25 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 2 — The Honest Education</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">Desire (40+)</div>
+              <div class="hook-text">“If you don’t feel desire until after things start… that’s not low libido, that’s how your body works now”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + relief for 40+ audience</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Lubrication</div>
+              <div class="hook-text">“Being wet doesn’t always mean you’re turned on… and not being wet doesn’t mean you’re not”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Breaks a major misconception</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anticipation</div>
+              <div class="hook-text">“Arousal doesn’t start where you think it does… it starts before anything physical happens”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Curiosity + expands understanding</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Cycle / Hormones</div>
+              <div class="hook-text">“If your desire feels inconsistent lately… it’s probably your hormones, not your interest”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Explains confusion with authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Vaginal Health</div>
+              <div class="hook-text">“If your underwear looks ‘bleached’… that’s not dirty, that’s your body doing exactly what it’s supposed to do”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> High curiosity + normalizes shame</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Orgasm (Brain)</div>
+              <div class="hook-text">“Orgasm isn’t just physical… your brain has to agree before your body does”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Science + insight</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anatomy</div>
+              <div class="hook-text">“Internal stimulation and external stimulation don’t hit the same… they’re different nerve pathways”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Educational + clarifying</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Pelvic Floor</div>
+              <div class="hook-text">“If your body feels tight or tense… your pelvic floor might be the reason nothing feels right”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Connects hidden issue to real experience</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Hormones</div>
+              <div class="hook-text">“Estrogen doesn’t just affect your cycle… it changes how your body feels everything”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Expands understanding</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Full-Body Arousal</div>
+              <div class="hook-text">“If you’re only focusing on one area… you’re missing most of your body’s response”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Broadens perspective</div>
+            </div>
+            <div id="bofu-p2-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Temperature / Sensation</div>
+              <div class="hook-text">“Your body reacts to temperature shifts faster than pressure… and most people never use that”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Specific + actionable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Birth Control</div>
+              <div class="hook-text">“Birth control doesn’t just prevent pregnancy… it can change how your body responds completely”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underserved + high relevance</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Medications</div>
+              <div class="hook-text">“If your sex drive changed after starting medication… that’s not in your head”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Validating + practical</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Sleep / Hormones</div>
+              <div class="hook-text">“If you’re not sleeping properly… your body won’t respond the same, no matter what you do”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clear cause-effect</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Health Norms</div>
+              <div class="hook-text">“Common doesn’t mean normal… especially when it comes to pain or discomfort”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Limits</div>
+              <div class="hook-text">“Soft limits and hard limits are not the same… and mixing them up is where people get hurt”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Safety + education</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Types</div>
+              <div class="hook-text">“Sensation play and impact play hit completely different systems in your body”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Adds depth to kink understanding</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Psychology</div>
+              <div class="hook-text">“Dominance isn’t about control… it’s about responsibility for someone else’s experience”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Neurodivergence</div>
+              <div class="hook-text">“If touch sometimes feels like too much instead of not enough… that’s sensory processing, not disinterest”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Removes shame + explains experience</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Neurodivergence</div>
+              <div class="hook-text">“Your brain might want it… but your body can’t keep up if you’re overstimulated”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Nuanced + validating</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Neurodivergence</div>
+              <div class="hook-text">“Distraction during sex isn’t lack of attraction… it’s how your brain processes attention”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + clarity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Neurodivergence</div>
+              <div class="hook-text">“If you need specific conditions to feel comfortable… that’s not high maintenance, that’s how your system works”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Empowering + practical</div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('bofu-p2-extra', this)">+ Show all 22 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 3 — Big Sister Advice</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">BDSM / Safety</div>
+              <div class="hook-text">“If you’re trying kink without a safe word… stop. That’s step one.”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Strong pattern interrupt + establishes authority immediately</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">BDSM / Education</div>
+              <div class="hook-text">“Most people think they understand kink… until they actually try it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Calls out false confidence. Creates curiosity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">BDSM / Aftercare</div>
+              <div class="hook-text">“What happens after matters more than what happened during”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Underrated concept. Signals deeper knowledge</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">BDSM / Exploration</div>
+              <div class="hook-text">“You don’t start extreme… you build into it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Grounds beginners. Prevents overwhelm</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">BDSM / Consent</div>
+              <div class="hook-text">“If you can’t clearly talk about it… you’re not ready to do it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clear boundary + leadership tone</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">BDSM / Awareness</div>
+              <div class="hook-text">“Not everything that feels intense is safe… and you need to know the difference”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Introduces discernment. Builds trust</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Products / Lube</div>
+              <div class="hook-text">“If you’re not using lube properly… you’re making it harder than it needs to be”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Practical, high-impact improvement</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Toys / Introduction</div>
+              <div class="hook-text">“If introducing toys feels awkward… you’re overthinking it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Normalizes + lowers barrier</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Positioning / Angles</div>
+              <div class="hook-text">“Before you try anything new… fix your angle first”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Immediate upgrade. Simple but powerful</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Hygiene / Care</div>
+              <div class="hook-text">“If you’re not cleaning your toys properly… don’t use them”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Authority + safety</div>
+            </div>
+            <div id="bofu-p3-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Technique / Sensation</div>
+              <div class="hook-text">“Your body responds to contrast… not just more pressure”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Memorable, actionable insight</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Hormones / Support</div>
+              <div class="hook-text">“There are options for your body… you just haven’t been told them”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Hope + authority, especially 40+</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Sensory</div>
+              <div class="hook-text">“Blindfolds aren’t about control… they’re about amplifying sensation”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + curiosity + easy entry point</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Sex Ed Gaps</div>
+              <div class="hook-text">“Sex ed didn’t fail you by accident… it left out the parts that matter”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Bold + systemic callout</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Medical / OBGYN</div>
+              <div class="hook-text">“If you don’t feel comfortable with your OBGYN… find a new one”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Empowering + practical</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Exploration / Play</div>
+              <div class="hook-text">“Food play works… if you understand why you’re doing it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Adds nuance to something often treated as a joke</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anal / Prep</div>
+              <div class="hook-text">“If you’re not preparing properly… it’s not going to feel good”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Honest + necessary + high search value</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Anal / Prep</div>
+              <div class="hook-text">“This is not something you just try… there’s a process”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Sets expectations + builds authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Porn / Exploration</div>
+              <div class="hook-text">“Watching porn together is either going to connect you… or show you what’s off”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Slightly edgy + high curiosity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Oral (Women)</div>
+              <div class="hook-text">“If you don’t understand anatomy… you’re guessing”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Direct + educational</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Oral (Women)</div>
+              <div class="hook-text">“Consistency matters more than speed… every time”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clear, actionable correction</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Oral (Men)</div>
+              <div class="hook-text">“If you’re rushing it… it’s not landing the way you think”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Calls out common mistake</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Oral (Men)</div>
+              <div class="hook-text">“Pay attention to reaction… not what you think should work”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Shifts focus to feedback</div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('bofu-p3-extra', this)">+ Show all 23 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 4 — Expanding the Script</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <div class="hook-list">
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / History</div>
+              <div class="hook-text">“That ‘good girl’ voice in your head? That’s not you… that’s Victorian purity culture”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Unexpected + personalizes history</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Medical Bias</div>
+              <div class="hook-text">“They literally removed the clitoris from medical diagrams… and you’re wondering why no one explained your body”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Shock + fact + relevance</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Orgasm Gap</div>
+              <div class="hook-text">“The orgasm gap isn’t confusing… it’s what happens when women weren’t studied properly”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Medicalization</div>
+              <div class="hook-text">“Female pleasure used to be diagnosed as a disorder… and we still carry that mindset”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Uncomfortable truth + curiosity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Marriage</div>
+              <div class="hook-text">“Sex was designed as a duty in marriage… not something you enjoy”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Strong, disruptive framing</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Religion</div>
+              <div class="hook-text">“Some of your ‘preferences’ aren’t yours… they were taught through shame”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Identity challenge</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Patriarchy / Reproduction</div>
+              <div class="hook-text">“Sex wasn’t built around pleasure… that part got added later”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Big idea, creates curiosity loop</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Beauty</div>
+              <div class="hook-text">“You didn’t learn how to feel sexy… you learned how to look it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Clean, cutting, repeatable</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Diet Culture</div>
+              <div class="hook-text">“Diet culture didn’t just shrink your body… it shrank your connection to it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Fresh angle + emotional hit</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Media</div>
+              <div class="hook-text">“At some point, you stopped being a person… and became something to be chosen”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Slightly harsh → stops scroll</div>
+            </div>
+            <div id="bofu-p4-extra" style="display:none; flex-direction:column; gap:8px;">
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Metrics</div>
+              <div class="hook-text">“Dating apps turned attraction into data… and now no one trusts their own instincts”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Modern + insightful</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Self-Worth</div>
+              <div class="hook-text">“Trying to ‘fix yourself’ might be the reason you feel disconnected”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Contrarian + curiosity</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Capitalism / Aging</div>
+              <div class="hook-text">“Aging feels like loss… because your value was tied to being wanted”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Emotional + systemic</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Queer / Safety</div>
+              <div class="hook-text">“People don’t ‘suddenly realize’ later in life… they finally feel safe enough to admit it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + relatability</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Queer / Awareness</div>
+              <div class="hook-text">“You didn’t miss the signs… you were never given permission to see them”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Deep + personal</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Relationship Structures</div>
+              <div class="hook-text">“Monogamy didn’t start with love… it started with ownership”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Controversial + history</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Psychology</div>
+              <div class="hook-text">“Kink isn’t about control… it’s about trust you can’t fake”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Reframe + intrigue</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Consent</div>
+              <div class="hook-text">“Consent isn’t ‘yes’… it’s understanding what you’re saying yes to”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Sharp + corrective</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Nervous System</div>
+              <div class="hook-text">“Aftercare isn’t optional… your nervous system literally needs it”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Science + authority</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Boundaries</div>
+              <div class="hook-text">“Most people skip the negotiation part… and that’s where things go wrong”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Calls out risky behavior</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Culture</div>
+              <div class="hook-text">“What you think is ‘taboo’… is just what your culture told you to fear”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Expands perspective</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Dynamics</div>
+              <div class="hook-text">“The reason this works… is because your brain reads safety inside intensity”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Curiosity + science</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Misunderstanding</div>
+              <div class="hook-text">“Saying yes without understanding it… is not consent”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Strong, slightly confrontational</div>
+            </div>
+            <div class="hook-item">
+              <div class="hook-theme">Kink / Education</div>
+              <div class="hook-text">“People are experimenting without information… and calling it exploration”</div>
+              <div class="hook-why"><span class="hook-why-label">Why it works:</span> Bold callout</div>
+            </div>
+            </div>
+            <button class="show-more-btn" onclick="toggleExtra('bofu-p4-extra', this)">+ Show all 24 hooks</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          <span>Pillar 5 — Story & Experience</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+            <div class="pillar5-placeholder">
+              <div class="pillar5-icon">✍️</div>
+              <div class="pillar5-title">Your stories. Your voice.</div>
+              <p class="pillar5-desc">This pillar is reserved for Meg's personal storytelling. These hooks can't be pre-written — they come from lived experience, real moments, and things only Meg can say. The content for this pillar gets created as the brand grows.</p>
+            </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section id="formats">
+  <div class="section-label">06 — Series</div>
+  <div class="section-title">5 Repeatable Formats</div>
+  <p class="section-body">Each one is bingable, recognizable within two episodes, and builds the brand every time it runs. These are the series that create loyalty — and the phrase that becomes her signature.</p>
+
+  <div class="formats-grid">
+    <div class="format-card">
+      <div class="format-header">
+        <div class="format-emoji">✅</div>
+        <div class="format-title-block">
+          <div class="format-name">"That's Totally Normal"</div>
+          <div class="format-subtitle">Myth-bust series · signature phrase builder</div>
+        </div>
+      </div>
+      <div class="format-body">
+        <p class="format-desc">One thing per video. Meg names something people think is weird, broken, or embarrassing about themselves sexually — then just explains why it's not. Fast, direct, one topic per video. No buildup, no preamble. The format is nearly identical every time: name the thing, explain it, close with something warm or funny. Repetition is the brand. People start recognizing it within two videos. They come back wondering "will she say my thing?" and share it when she does. This also solves the signature phrase problem — "that's totally normal" gets embedded in the audience's memory through repetition.</p>
+        <div class="format-meta">
+          <div class="format-badge high">Bingability: High</div>
+          <div class="format-badge high">Builds signature phrase</div>
+          <div class="format-badge">Evergreen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="format-card">
+      <div class="format-header">
+        <div class="format-emoji">📚</div>
+        <div class="format-title-block">
+          <div class="format-name">"Nobody Told You"</div>
+          <div class="format-subtitle">Education series · search-friendly</div>
+        </div>
+      </div>
+      <div class="format-body">
+        <p class="format-desc">Each video fills one specific gap in sex education that school, parents, and culture left open. Hook is always some version of "nobody told you this" — content is one clean, useful thing. Positions Meg as the person who has the information people needed but never got. Not clinical. Not performative. Just honest education delivered by someone who genuinely can't believe nobody covered this yet. Topics rotate across anatomy, desire, communication, neurodivergence, aging, queer experience.</p>
+        <div class="format-meta">
+          <div class="format-badge high">Bingability: High</div>
+          <div class="format-badge high">Strong SEO potential</div>
+          <div class="format-badge">Self-contained</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="format-card">
+      <div class="format-header">
+        <div class="format-emoji">🔥</div>
+        <div class="format-title-block">
+          <div class="format-name">"A Woman Would Never"</div>
+          <div class="format-subtitle">Hot take series · brand-building</div>
+        </div>
+      </div>
+      <div class="format-body">
+        <p class="format-desc">Meg picks one piece of conventional wisdom about sex, relationships, or gender roles and disagrees with it. Calmly, specifically, with reasons. Plays directly into her existing phrase and "no filter" energy. The tone isn't ranty — it's confident. She's not arguing for argument's sake. She's had 10 years of evidence that certain things people treat as gospel are actually the source of a lot of unnecessary pain. The phrase becomes a recurring signal that a hot take is coming. Builds loyalty and gives people something to quote back.</p>
+        <div class="format-meta">
+          <div class="format-badge med">Bingability: Med-High</div>
+          <div class="format-badge high">Builds signature phrase</div>
+          <div class="format-badge">High shareability</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="format-card">
+      <div class="format-header">
+        <div class="format-emoji">💌</div>
+        <div class="format-title-block">
+          <div class="format-name">"Big Sister Would Have Told You"</div>
+          <div class="format-subtitle">Advice series · multigenerational</div>
+        </div>
+      </div>
+      <div class="format-body">
+        <p class="format-desc">Each video is one piece of advice framed as "the thing your big sister would have told you before [specific situation]." First relationship. First honest conversation in bed. First time you wanted something you didn't know how to name. Intimate and warm without being soft. Personal without being oversharing. The "first time" framing is evergreen because there are endless firsts that span every age group. Works especially well for the 40+ audience — someone married 15 years still has firsts. Someone who comes out later in life has firsts. Includes everyone without making it awkward.</p>
+        <div class="format-meta">
+          <div class="format-badge high">Bingability: High</div>
+          <div class="format-badge high">40+ audience</div>
+          <div class="format-badge">Emotionally resonant</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="format-card">
+      <div class="format-header">
+        <div class="format-emoji">🍑</div>
+        <div class="format-title-block">
+          <div class="format-name">"Everybody Has a Butthole"</div>
+          <div class="format-subtitle">Humour series · highest viral potential</div>
+        </div>
+      </div>
+      <div class="format-body">
+        <p class="format-desc">The most Meg-specific format on the list. She picks one thing people treat as taboo, unusual, or embarrassing in sexual or intimacy contexts — and approaches it with the casual levity of someone who has zero remaining capacity for unnecessary embarrassment. The title is also a philosophy: nobody is as unique in their weirdness as they think. Everybody has a body. Everybody has curiosity. Each episode is short, punchy, ends with something that makes people feel less alone. The series name alone is shareable. People will send it to friends without context and let the title do the work.</p>
+        <div class="format-meta">
+          <div class="format-badge high">Bingability: Very High</div>
+          <div class="format-badge high">Highest viral potential</div>
+          <div class="format-badge">Builds brand recall</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATORS -->
+<section id="creators">
+  <div class="section-label">07 — Research</div>
+  <div class="section-title">Creator Teardown</div>
+  <p class="section-body">Five creators in this space worth watching closely. Not to copy — to understand what works and find the gaps they're leaving open.</p>
+
+  <div class="creator-grid">
+    <div class="creator-card">
+      <div class="creator-top">
+        <div>
+          <div class="creator-name">@kimoftheinternet</div>
+          <div class="creator-platform">TikTok / Instagram</div>
+        </div>
+        <div class="creator-borrow">Delivery speed</div>
+      </div>
+      <ul class="creator-bullets">
+        <li>Queer and feminist commentary on relationships and culture</li>
+        <li>Very internet-native — makes complex ideas accessible fast</li>
+        <li>Strong hook game, assumes audience intelligence</li>
+        <li>Borrow: the speed and efficiency of delivery</li>
+      </ul>
+    </div>
+
+    <div class="creator-card">
+      <div class="creator-top">
+        <div>
+          <div class="creator-name">@welcometoheidi</div>
+          <div class="creator-platform">Instagram</div>
+        </div>
+        <div class="creator-borrow">Visual warmth</div>
+      </div>
+      <ul class="creator-bullets">
+        <li>Sex-positive education with warm, approachable visual identity</li>
+        <li>Anatomy education, pleasure-focus, body neutrality</li>
+        <li>Makes education feel like an invitation, not a correction</li>
+        <li>Borrow: how she frames difficult topics as openings, not lectures</li>
+      </ul>
+    </div>
+
+    <div class="creator-card">
+      <div class="creator-top">
+        <div>
+          <div class="creator-name">@hope_peddler</div>
+          <div class="creator-platform">TikTok</div>
+        </div>
+        <div class="creator-borrow">Tone strategy</div>
+      </div>
+      <ul class="creator-bullets">
+        <li>Emotional honesty, feels like a close friend in the first 5 seconds</li>
+        <li>Tone IS the strategy — people follow for how she makes them feel</li>
+        <li>Gentle but unflinching — warm AND direct simultaneously</li>
+        <li>Borrow: the "gentle but unflinching" pacing on emotional content</li>
+      </ul>
+    </div>
+
+    <div class="creator-card">
+      <div class="creator-top">
+        <div>
+          <div class="creator-name">@matthewcba</div>
+          <div class="creator-platform">TikTok</div>
+        </div>
+        <div class="creator-borrow">Format consistency</div>
+      </div>
+      <ul class="creator-bullets">
+        <li>Repeatable, structured educational format with strong hooks</li>
+        <li>Dating, attachment, communication in relationships</li>
+        <li>Format so consistent that viewers know what they're getting — builds loyalty fast</li>
+        <li>Borrow: build 2-3 templates and rotate so production speeds up over time</li>
+      </ul>
+    </div>
+
+    <div class="creator-card">
+      <div class="creator-top">
+        <div>
+          <div class="creator-name">K.W. Bogen</div>
+          <div class="creator-platform">Multi-platform</div>
+        </div>
+        <div class="creator-borrow">Kink framing</div>
+      </div>
+      <ul class="creator-bullets">
+        <li>Kink and BDSM education: grounded, non-sensationalized, accessible</li>
+        <li>Consent, communication within kink, community, safety</li>
+        <li>Removes fear factor without removing substance</li>
+        <li>Borrow: framing kink as a communication practice first, not a performance</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gaps-box">
+    <div class="gap-item">
+      <div class="gap-num">Gap 01 — Biggest opportunity</div>
+      <div class="gap-title">The 40+ audience is almost completely unaddressed</div>
+      <div class="gap-desc">Most sex education content implicitly skews young. Content that explicitly names and speaks to people in midlife, post-divorce, post-menopause, or late-to-the-conversation has almost no competition and massive demand. Meg is positioned to own this.</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-num">Gap 02 — Most differentiated asset</div>
+      <div class="gap-title">Humor at scale in the "big sister" lane</div>
+      <div class="gap-desc">Most sex educators are either too clinical or too performative. Nobody has fully owned the "big sister who's also genuinely funny" lane with enough consistency to make it a brand. That's Meg's most differentiated asset and the one worth building the whole identity around.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Meg<span>Talks</span>Sex</div>
+  <div class="footer-note">Build slow. Build right. The foundations matter.</div>
+</footer>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  // Funnel tabs
+  function showStage(stage, btn) {
+    document.querySelectorAll('.funnel-stage').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.funnel-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById(stage).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // Accordion
+  function toggleAccordion(btn) {
+    const content = btn.nextElementSibling;
+    const isOpen = content.classList.contains('open');
+    // Close all in same stage
+    const stage = btn.closest('.funnel-stage');
+    stage.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+    stage.querySelectorAll('.accordion-btn').forEach(b => b.classList.remove('open'));
+    if (!isOpen) {
+      content.classList.add('open');
+      btn.classList.add('open');
+    }
+  }
+
+  // Show more / collapse
+  function toggleExtra(id, btn) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const isHidden = el.style.display === 'none' || el.style.display === '';
+    if (isHidden) {
+      el.style.display = 'flex';
+      btn.textContent = '− Show fewer hooks';
+    } else {
+      el.style.display = 'none';
+      btn.textContent = '+ Show all 20 hooks';
+    }
+  }
+
+  // Scroll top visibility
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollTop');
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+</script>
+
+</body>
+</html>
